@@ -1,0 +1,91 @@
+<h3>Formulario 1</h3>
+<div class="container">
+    <div class="row">
+        <form name="form" id="form" (submit)="enviar()" #formulario="ngForm">
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" class="form-control" [(ngModel)]="usuario.nombre" #nombre="ngModel" required>
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre.errors">
+                        El campo nombre es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">E-Mail: </label>
+                <input type="email" name="correo" class="form-control" [(ngModel)]="usuario.correo" #correo="ngModel" required>
+                <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="alert alert-danger">
+                    <div *ngIf="correo.errors">
+                        El campo E-Mail es obligatorio
+                    </div>
+                    <div *ngIf="correo.valid && correo.touched">
+                        El E-Mail ingresado no es válido
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" class="form-control" [(ngModel)]="usuario.telefono" #telefono="ngModel" required>
+                <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+                    <div *ngIf="telefono.errors">
+                        El campo Telefono es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" class="form-control" [(ngModel)]="usuario.direccion" #direccion="ngModel" required>
+                <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="alert alert-danger">
+                    <div *ngIf="direccion.errors">
+                        El campo Direccion es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">Pais</label>
+                <select name="pais" class="form-control" [(ngModel)]="usuario.pais">
+                    <option *ngFor="let pais of paises" value="{{pais.nombre}}">
+                        {{pais.nombre}}
+                    </option>
+                </select>
+            </div>
+
+            <hr/>
+            <input type="submit" value="Enviar" class="btn btn-success" [disabled]="!formulario.form.valid" />
+            <hr/>
+        </form>
+
+        <div class="form-group">
+            <label for="">Acepte los términos y condiciones</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" (change)="seleccionacheck($event)" [(ngModel)]="checkboxMarca">
+        </div>
+
+        <hr>
+        <h4>Usuarios registrados</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>E-Mail</th>
+                    <th>Telefono</th>
+                    <th>Dirección</th>
+                    <th>Pais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.nombre}}</td>
+                    <td>{{user.correo}}</td>
+                    <td>{{user.telefono}}</td>
+                    <td>{{user.direccion}}</td>
+                    <td>{{user.pais}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

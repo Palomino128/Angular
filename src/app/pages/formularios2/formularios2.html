@@ -1,0 +1,91 @@
+<h3>Formulario 2</h3>
+<div class="container">
+    <div class="row">
+        <form [formGroup]="formulario" (ngSubmit)="enviar()">
+            
+            <!-- Campo Nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="alert alert-danger">
+                    <div *ngIf="nombre?.errors?.['required']">
+                        El campo nombre es obligatorio
+                    </div>
+                    <div *ngIf="nombre?.errors?.['minlength']">
+                        El nombre debe tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo Correo -->
+            <div class="form-group">
+                <label for="correo">E-Mail:</label>
+                <input type="email" class="form-control" id="correo" formControlName="correo">
+                <div *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)" class="alert alert-danger">
+                    <div *ngIf="correo?.errors?.['required']">
+                        El campo E-Mail es obligatorio
+                    </div>
+                    <div *ngIf="correo?.errors?.['pattern']">
+                        El E-Mail ingresado no es válido
+                    </div>
+                    <div *ngIf="correo?.errors?.['minlength']">
+                        El E-Mail debe tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono" formControlName="telefono">
+                <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="alert alert-danger">
+                    <div *ngIf="telefono?.errors?.['required']">
+                        El campo Teléfono es obligatorio
+                    </div>
+                    <div *ngIf="telefono?.errors?.['minlength']">
+                        El teléfono debe tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo Dirección -->
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" formControlName="direccion">
+                <div *ngIf="direccion?.invalid && (direccion?.dirty || direccion?.touched)" class="alert alert-danger">
+                    <div *ngIf="direccion?.errors?.['required']">
+                        El campo Dirección es obligatorio
+                    </div>
+                    <div *ngIf="direccion?.errors?.['minlength']">
+                        La dirección debe tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo País -->
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <select class="form-control" id="pais" formControlName="pais">
+                    <option value="">Seleccione un país</option>
+                    <option *ngFor="let pais of paises" [value]="pais.nombre">
+                        {{pais.nombre}}
+                    </option>
+                </select>
+                <div *ngIf="pais?.invalid && (pais?.dirty || pais?.touched)" class="alert alert-danger">
+                    <div *ngIf="pais?.errors?.['required']">
+                        El campo País es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <button type="submit" class="btn btn-success" [disabled]="!formulario.valid">
+                Enviar
+            </button>
+            
+            <button type="button" class="btn btn-secondary ml-2" (click)="formulario.reset()">
+                Cargar formulario otra vez
+            </button>
+        </form>
+    </div>
+</div>

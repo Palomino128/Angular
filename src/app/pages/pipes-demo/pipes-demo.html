@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2>Demo de Pipes Angular (nativos)</h2>
+<p><strong>SolPeruano (custom):</strong> {{ precio | solPeruano }}</p>
+
+  <!-- 1) date -->
+  <p><strong>Date:</strong> {{ hoy | date:'fullDate' }}</p>
+
+  <!-- 2) titlecase -->
+  <p><strong>TitleCase:</strong> {{ titulo | titlecase }}</p>
+
+  <!-- 3) uppercase -->
+  <p><strong>UpperCase:</strong> {{ titulo | uppercase }}</p>
+
+  <!-- 4) lowercase -->
+  <p><strong>LowerCase:</strong> {{ titulo | lowercase }}</p>
+
+  <!-- 5) number (DecimalPipe) -->
+  <p><strong>Number:</strong> {{ precio | number:'1.2-2' }}</p>
+
+  <!-- 6) percent -->
+  <p><strong>Percent:</strong> {{ avance | percent:'1.0-2' }}</p>
+
+  <!-- 7) currency (con PEN) -->
+  <p><strong>Currency (PEN):</strong> {{ precio | currency:'PEN':'symbol-narrow' }}</p>
+  <!-- Con el LOCALE_ID = 'es-PE' ya verás S/ por defecto -->
+
+  <hr>
+
+  <!-- Extra útiles (por si el profe pide más) -->
+  <p><strong>Slice (1..3):</strong> {{ frutas | slice:1:3 }}</p>
+  <p><strong>JSON:</strong> {{ persona | json }}</p>
+  <!-- <div *ngFor="let item of persona | keyvalue">{{ item.key }}: {{ item.value }}</div> -->
+</div>
