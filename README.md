@@ -1,3 +1,31 @@
+## 🚀 Angular Starter Application
+
+<div align="center">
+
+![Angular Logo](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) <!-- Standard Angular Logo Badge -->
+
+[![GitHub stars](https://img.shields.io/github/stars/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/network)
+[![GitHub issues](https://img.shields.io/github/issues/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/issues)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+**A foundational Angular project, perfect for building robust and scalable single-page applications.**
+
+</div>
+
+## 📖 Overview
+
+This repository hosts a standard Angular application generated with the Angular CLI. It provides a solid starting point for developing modern web applications, showcasing the core capabilities and best practices of the Angular framework. Ideal for both learning Angular and serving as a boilerplate for more complex projects, it includes basic configurations for development, testing, and building.
+
+## ✨ Features
+
+-   🎯 **Component-Based Architecture**: Modular and reusable UI components.
+-   🗺️ **Client-Side Routing**: Seamless navigation within the application.
+-   📝 **Reactive Forms**: Robust and flexible form handling capabilities.
+-   🧪 **Unit & End-to-End Testing**: Pre-configured testing setup with Karma, Jasmine, and Protractor.
+-   🚀 **Optimized Build Process**: Leveraging Angular CLI for efficient development and production builds.
+-   ⚙️ **Environment Configuration**: Easy management of environment-specific settings.
+
 ## 🔍 DEEP CODE ANALYSIS
 
 ### 1. Repository Classification
@@ -62,42 +90,6 @@ Based on the boilerplate nature of the detected Angular project:
 -   **External Service Dependencies:** None explicitly detected in this boilerplate.
 
 ---
-
-## 🚀 Angular Starter Application
-
-<div align="center">
-
-![Angular Logo](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) <!-- Standard Angular Logo Badge -->
-
-[![GitHub stars](https://img.shields.io/github/stars/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/network)
-[![GitHub issues](https://img.shields.io/github/issues/Palomino128/Angular?style=for-the-badge)](https://github.com/Palomino128/Angular/issues)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
-**A foundational Angular project, perfect for building robust and scalable single-page applications.**
-
-</div>
-
-## 📖 Overview
-
-This repository hosts a standard Angular application generated with the Angular CLI. It provides a solid starting point for developing modern web applications, showcasing the core capabilities and best practices of the Angular framework. Ideal for both learning Angular and serving as a boilerplate for more complex projects, it includes basic configurations for development, testing, and building.
-
-## ✨ Features
-
--   🎯 **Component-Based Architecture**: Modular and reusable UI components.
--   🗺️ **Client-Side Routing**: Seamless navigation within the application.
--   📝 **Reactive Forms**: Robust and flexible form handling capabilities.
--   🧪 **Unit & End-to-End Testing**: Pre-configured testing setup with Karma, Jasmine, and Protractor.
--   🚀 **Optimized Build Process**: Leveraging Angular CLI for efficient development and production builds.
--   ⚙️ **Environment Configuration**: Easy management of environment-specific settings.
-
-## 🖥️ Screenshots
-
-<!-- TODO: Add actual screenshots of the application in action (e.g., initial page, key features) -->
-<!-- Example:
-![Home Page Screenshot](path-to-homepage-screenshot.png)
-![Feature Section Screenshot](path-to-feature-screenshot.png)
--->
 
 ## 🛠️ Tech Stack
 
